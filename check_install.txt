@@ -1,0 +1,9 @@
+pip install openmim
+mim install mmdet==2.22.0
+
+pip install openmim 으로 해야 mvcc-full 설치 가능해짐 
+
+
+configs/msg3d/msg3d_pyskl_ntu60_xsub_3dkp/j.py checkpoints/SOME_CHECKPOINT.pth 8 --eval top_k_accuracy --out result.pkl
+
+python tools/demo_skeleton.py --video tools/ntu_sample.avi --config configs/msg3d/msg3d_pyskl_ntu60_xsub_3dkp/j.py --checkpoint('https://download.openmmlab.com/mmaction/pyskl/ckpt/' msg3d/msg3d_pyskl_ntu60_xview_hrnet/j.pth) --mode cam
